@@ -1,4 +1,17 @@
 {
-  "name": "nestJsTemplate",
-  "packageManager": "yarn@4.9.2"
+    "name": "nest-turbo-monorepo",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "turbo run dev --parallel",
+        "build": "turbo run build",
+        "clean": "turbo run clean"
+    },
+    "devDependencies": {
+        "turbo": "^2.0.0",
+        "typescript": "^5.4.0"
+    }
 }
